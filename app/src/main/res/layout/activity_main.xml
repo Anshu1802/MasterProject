@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgmain">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/feedbackbtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/feedbackbtncolor"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="Feedback"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/developerbtn"
+        app:layout_constraintTop_toBottomOf="@+id/percentagebtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/percentagebtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="@color/percentagebtncolor"
+        android:padding="10dp"
+        android:text="Percentage"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/feedbackbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sipbtn"
+        app:layout_constraintTop_toBottomOf="@+id/currencybtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gstbtn"
+        android:layout_width="0dp"
+        android:layout_height="169dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="39dp"
+        android:backgroundTint="@color/gstbtncolor"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text=" GST"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currencybtn"
+        app:layout_constraintEnd_toStartOf="@+id/currencybtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/developerbtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="39dp"
+        android:backgroundTint="@color/developerbtncolor"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="Devloper"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feedbackbtn"
+        app:layout_constraintEnd_toStartOf="@+id/feedbackbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/feedbackbtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sipbtn"
+        android:layout_width="0dp"
+        android:layout_height="169dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="39dp"
+        android:backgroundTint="@color/sipbtncolor"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="S.I.P"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/percentagebtn"
+        app:layout_constraintEnd_toStartOf="@+id/percentagebtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/currencybtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="@color/currencybtncolor"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text=" Currency"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/percentagebtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gstbtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="63dp"
+        android:text="Calculate"
+        android:textSize="26dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/currencybtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
