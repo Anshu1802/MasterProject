@@ -15,15 +15,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myButton: Button = findViewById(R.id.gstbtn)
+        val mygstButtonvariable: Button = findViewById(R.id.gstbtn)
+        val mysipButtonvariable: Button =findViewById(R.id.sipbtn)
 
 
-        myButton.setOnClickListener {
+
+        mygstButtonvariable.setOnClickListener {
             val intent = Intent(this, gstcalculator::class.java)
-            startActivity(intent)
+            startActivity(intent) }
 
-
-        }
+        mysipButtonvariable.setOnClickListener {
+            val intent = Intent(this, sipactivity::class.java)
+            startActivity(intent) }
 
 
     }
