@@ -1,27 +1,25 @@
 package com.example.govermentcalculation
 
+import android.R.attr.stepSize
 import android.os.Bundle
+import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 
 
 class sipactivity : AppCompatActivity() {
 
     private var progressView: TextView? = null
-    private var seekbarView: SeekBar? = null
     var seekBarNormal: SeekBar? = null
 
     private var progressView2: TextView? = null
-    private var seekbarView2: SeekBar? = null
     var seekBarNormal2: SeekBar? = null
 
     private var progressView3: TextView? = null
-    private var seekbarView3: SeekBar? = null
     var seekBarNormal3: SeekBar? = null
-    lateinit var variable :String
+
+
 
 
 
@@ -41,13 +39,25 @@ class sipactivity : AppCompatActivity() {
         seekBarNormal3 = this.findViewById(R.id.seekbar_return)
 
 
+        var convert :String
+        var convertint :Int=0
+
+        var convert2 :String
+        var convertint2 :Int=0
+
+        var convert3 :String
+        var convertint3 :Int=0
+
+
 
         seekBarNormal?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
-            override fun onProgressChanged(seekBar: SeekBar, progress: Int,
-                                           fromUser: Boolean) {
-                progressView!!.text = progress.toString()
-//                variable=progress.toString()
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+
+                progressView!!.text = (Math.round((progress / 500).toDouble()).toInt() * 500).toString()
+                convert=progress.toString()
+                convertint=convert.toInt()
+
 
             }
 
@@ -60,11 +70,15 @@ class sipactivity : AppCompatActivity() {
             }
         })
 
+
+
         seekBarNormal2?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
             override fun onProgressChanged(seekBar: SeekBar, progress: Int,
                                            fromUser: Boolean) {
                 progressView2!!.text = progress.toString()
+                convert2=progress.toString()
+                convertint2=convert2.toInt()
 
             }
 
@@ -82,6 +96,8 @@ class sipactivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int,
                                            fromUser: Boolean) {
                 progressView3!!.text = progress.toString()
+                convert3=progress.toString()
+                convertint3=convert3.toInt()
 
             }
 
@@ -98,7 +114,45 @@ class sipactivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
+
+        var sipbutton :Button=findViewById(R.id.buttonsip)
+        var resulttext:TextView=findViewById(R.id.resultsip)
+        var totalamount=(convertint*12)*convertint2
+
+
+
+        sipbutton.setOnClickListener {
+
+            resulttext.setText("the amount after calculating $totalamount")
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 
 
 }
